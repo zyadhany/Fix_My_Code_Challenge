@@ -1,33 +1,29 @@
 #!/usr/bin/python3
-""" Module for square opject"""
+""" Module for user opject """
 
 
-class Square():
-    """ Square class """
-    width = 0
-    height = 0
+class User():
+    """ User Class """
 
-    def __init__(self, *args, **kwargs):
-        """ Instantiation of the class """
-        for key, value in kwargs.items():
-            setattr(self, key, value)
+    def __init__(self):
+        """ Intlization of user """
+        self.__email = None
 
-    def area_of_my_square(self):
-        """ Area of the square """
-        return self.width * self.height
+    @property
+    def email(self):
+        """ Emeil property """
+        return self.__email
 
-    def permiter_of_my_square(self):
-        """ Perimeter of my square """
-        return (self.width * 2) + (self.height * 2)
-
-    def __str__(self):
-        """ String representation"""
-        return "{}/{}".format(self.width, self.height)
+    @email.setter
+    def email(self, value):
+        """ Setter for email """
+        if type(value) is not str:
+            raise TypeError("email must be a string")
+        self.__email = value
 
 
 if __name__ == "__main__":
-    """ Craete an opject """
-    s = Square(width=12, height=9)
-    print(s)
-    print(s.area_of_my_square())
-    print(s.permiter_of_my_square())
+
+    u = User()
+    u.email = "john@snow.com"
+    print(u.email)
