@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-""" module for square opject"""
+""" Module for square opject"""
 
 
 class square():
-    """ square class """
+    """ Square class """
     width = 0
     height = 0
 
@@ -26,7 +26,7 @@ class square():
 
 
 if __name__ == "__main__":
-    """ craete an opject """
+    """ Craete an opject """
     s = square(width=12, height=9)
     print(s)
     print(s.area_of_my_square())
